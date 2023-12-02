@@ -1,5 +1,17 @@
 # Simon Says Kata
 
+Simon is a game of short-term memory skill. The device creates a series of tones and lights and requires a user to repeat the sequence. If the user succeeds, the series becomes progressively longer and more complex.
+
+<p align="center">
+  <img src="simon.png" width="350" title="simon game">
+</p>
+
+## Rules
+- The computer generates a random color (green, red, blue or yellow) and a tone linked to that color
+- If the player presses the correct combination of colors, a new color will be appended at the end of the list
+- If the player selects an incorrect color, then the game is over
+- The game runs until the player loses
+
 ## PHP with PHPUnit
 
 1. Install [composer](https://getcomposer.org/) `curl -sS https://getcomposer.org/installer | php`
