@@ -1,93 +1,93 @@
-# Requisitos
-Es recomendable tener instalado nvm (Node Version Manager).
+# Requirements
+It is recommended to have _nvm_ (Node Version Manager) installed.
 
-- [nvm para Linux/macOS](https://github.com/nvm-sh/nvm#installing-and-updating)
-- [nvm para Windows](https://github.com/coreybutler/nvm-windows#installation--upgrades)
+- [nvm for Linux/macOS](https://github.com/nvm-sh/nvm#installing-and-updating)
+- [nvm for Windows](https://github.com/coreybutler/nvm-windows#installation--upgrades)
 
-# Instalación
-> Si se encuentra cualquier problema durante la instalación revisar la sección de *Solución de problemas* para resolver los problemas mas comunes.
+# Installation
+> If any problems are encountered during installation, check the *Troubleshooting* section to resolve common problems.
 
-En la carpeta `typescript` de este proyecto (en la que se encuentra este fichero README.md) ejecutar el siguiente comando para descargar la versión de node correspondiente al proyecto.
+In the `typescript` folder of this project (where this README.md file is located) run the following command to download the version of node corresponding to the project.
 ```bash
 nvm install
-# --- o ---
-nvm install $(Get-Content .nvmrc) # <- si trabajas en Windows
+# --- or ---
+nvm install $(Get-Content .nvmrc) # <- if you are working on Windows
 ```
 
-Una vez descargada esta versión marcarla como activa en la sesión de consola actual mediante el comando:
+Once downloaded, mark this version as active in the current console session using the command:
 ```bash
 nvm use
-# --- o ---
-nvm use $(Get-Content .nvmrc) # <- si trabajas en Windows
+# --- or ---
+nvm use $(Get-Content .nvmrc) # <- if you are working on Windows
 ```
 
-Por último hay que descargar las dependencias del proyecto, esto se puede hacer con `npm` o con `yarn` a vuestra elección.
+Finally, you need to download the project dependencies, this can be done with `npm` or `yarn` of your choice.
 ```bash
 npm install
-# --- o ---
+# --- or ---
 yarn install
 ```
 
 # Scripts
-Todos los scripts pueden lanzarse con `npm` o con `yarn`, si quieres saber mas sobre estos puedes revisar la sección `scripts` del fichero `package.json`.
+All scripts can be run with either `npm` or `yarn`, if you want to know more about these you can check the `scripts` section of the `package.json` file.
 
-> Recuerda que todos estos comandos deben lanzarse en la carpeta `typescript` de este proyecto.
+> Remember that all these commands must be launched in the `typescript` folder of this project.
 
-## Lanzar los tests
+## Launch the tests
 ```bash
 npm run test
-# --- o ---
+# --- or ---
 yarn test
 ```
 
-## Calcular la cobertura de los tests
+## Calculate test coverage
 ```bash
 npm run coverage
-# --- o ---
+# --- or ---
 yarn coverage
 ```
 
-> Encontrarás el reporte de cobertura generado en el fichero `coverage/lcov-report/index.html`.
+> You will find the coverage report generated in the file `coverage/lcov-report/index.html`.
 
-## Lanzar los tests de forma automática
+## Launch the tests automatically
 ```bash
 npm run test:watch
-# --- o ---
+# --- or ---
 yarn test:watch
 ```
 
-> Lanzará los tests de forma automática siempre que se modifique el código de los tests o de producción.
+> Run tests automatically whenever test or production code is modified.
 
-## Buscar errores de estilo en el código
+## Check for style errors in the code
 ```bash
 npm run lint
-# --- o ---
+# --- or ---
 yarn lint
 ```
 
-## Corregir errores de estilo en el código
+## Correct styling errors in the code
 ```bash
 npm run lint:fix
-# --- o ---
+# --- or ---
 yarn lint:fix
 ```
 
-# Solución de problemas
-## No reconoce el comando `nvm`
-Si acabas de instalar nvm es posible que tengas que reiniciar el terminal para que te detecte el nuevo comando.
+# Troubleshooting
+## Doesn't recognise the `nvm` command
+If you have just installed _nvm_, you may need to restart the terminal to get the new command detected.
 
-## `nvm install`/`nvm use` me pide que le especifique la versión
-Asegúrate de estar dentro de la carpeta `typescript` de este proyecto.
+## `nvm install`/`nvm use` prompts me to specify the version
+Make sure you are inside the `typescript` folder of this project.
 
-Si estás en Windows puedes añadir `$(Get-Content .nvmrc)` al final del comando para pasarle como argumento el contenido del fichero `.nvmrc`. [Fuente](https://gist.github.com/danpetitt/e87dabb707079e1bfaf797d0f5f798f2?permalink_comment_id=3778440#gistcomment-3778440).
+If you are on Windows you can add `$(Get-Content .nvmrc)` to the end of the command to pass the contents of the `.nvmrc` file as an argument. [Source](https://gist.github.com/danpetitt/e87dabb707079e1bfaf797d0f5f798f2?permalink_comment_id=3778440#gistcomment-3778440).
 
-Si aún con esas no detectase automáticamente la versión, revisar el contenido del fichero `.nvmrc` y escribir `nvm install [version]`/`nvm use [version]` sustituyendo `[version]` por el contenido del fichero en su lugar.
+If it still does not automatically detect the version, check the contents of the `.nvmrc` file and type `nvm install [version]`/`nvm use [version]` replacing `[version]` with the contents of the file instead.
 
-## No reconoce el comando `yarn`
-Se puede instalar `yarn` tan fácil como ejecutar el siguiente comando:
+## It does not recognise the `yarn` command
+You can install `yarn` as easily as running the following command:
 ```bash
 npm install --global yarn
 ```
 
-## No encuentra el fichero package.json al ejecutar cualquier comando con `npm` o `yarn`
-Asegúrate de que te encuentras dentro del directorio `typescript` que se encuentra en la raíz de este proyecto.
+## Can't find the package.json file when running any command with `npm` or `yarn`
+Make sure you are inside the `typescript` directory which is located in the root of this project.
