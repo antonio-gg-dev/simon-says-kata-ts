@@ -7,10 +7,30 @@ Simon is a game of short-term memory skill. The device creates a series of tones
 </p>
 
 ## Rules
-- The computer generates a random color (green, red, blue or yellow) and a tone linked to that color
+- The computer generates a random color (green, red, blue or yellow) [_and a tone linked to that color_]
 - If the player presses the correct combination of colors, a new color will be appended at the end of the list
 - If the player selects an incorrect color, then the game is over
 - The game runs until the player loses
+
+## Output
+
+```txt
+Welcome to the game!
+Simon will show you a sequence of colors, repeat the sequence by entering the colors separated by a space.
+The colors are: Red [R], Blue [B], Yellow [Y] and Green [G].
+
+Simon says: yellow
+Your turn: y
+Good job!
+
+Simon says: yellow green
+Your turn: y y
+Good job!
+
+Simon says: yellow green blue
+Your turn: y g r
+Game over!
+```
 
 ## PHP with PHPUnit
 
