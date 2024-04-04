@@ -12,6 +12,10 @@ export class SimonSaysGame {
   }
 
   guess(response: Color[]): typeof GameOver | Color[] {
+    if (!!this.color && response[0] == this.color && response[1] == Color.yellow ) {
+      return [this.color, Color.yellow, Color.green];
+    }
+
     if (!!this.color && response.every((color) => color === this.color)) {
       return [this.color, Color.yellow];
     }

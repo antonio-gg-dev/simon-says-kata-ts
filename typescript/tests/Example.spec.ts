@@ -50,4 +50,18 @@ describe("SimonSaysGame", () => {
 
     expect(game.guess([Color.blue])).toStrictEqual([Color.blue, Color.yellow]);
   });
+
+  it("should return a third color when user guess first two colors", () => {
+    const game = new SimonSaysGame({
+      generate: jest.fn()
+        .mockImplementationOnce(() => Color.blue)
+        .mockImplementationOnce(() => Color.yellow),
+    });
+
+    game.start();
+
+    game.guess([Color.blue]);
+
+    expect(game.guess([Color.blue, Color.yellow])).toStrictEqual([Color.blue, Color.yellow, Color.green]);
+  });
 });
