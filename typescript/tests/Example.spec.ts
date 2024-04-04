@@ -17,4 +17,14 @@ describe("SimonSaysGame", () => {
 
     expect(game.start()).toBe(Color.yellow);
   });
+
+  it("should return Game over! when user fails", () => {
+    const game = new SimonSaysGame({
+      generate: () => Color.yellow,
+    });
+    game.start();
+
+    expect(game.guess([Color.blue])).toBe('Game over!');
+
+  });
 });
