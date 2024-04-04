@@ -7,11 +7,13 @@ export class SimonSaysGame {
     return this.generator.generate();
   }
 
-  guess(response: Color[]): string | Color[] {
+  guess(response: Color[]): typeof GameOver | Color[] {
     if (response.every(color => color === Color.yellow)) {
       return [Color.yellow, Color.yellow]
     }
 
-    return 'Game over!'
+    return GameOver
   }
 }
+
+export const GameOver = 'Game over!';

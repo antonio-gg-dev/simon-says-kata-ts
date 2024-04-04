@@ -1,5 +1,5 @@
 import { Color } from "../src/ColorGenerator";
-import { SimonSaysGame } from "../src/SimonSaysGame";
+import {GameOver, SimonSaysGame} from "../src/SimonSaysGame";
 
 describe("SimonSaysGame", () => {
   it("should return green when the game starts", () => {
@@ -25,7 +25,7 @@ describe("SimonSaysGame", () => {
 
     game.start();
 
-    expect(game.guess([Color.blue])).toBe('Game over!');
+    expect(game.guess([Color.blue])).toBe(GameOver);
   });
 
   it("should return a new color when user guess correctly", () => {
