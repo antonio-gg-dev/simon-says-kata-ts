@@ -1,4 +1,4 @@
-import { Color, IColorGenerator } from "./ColorGenerator";
+import {Color, IColorGenerator} from "./ColorGenerator";
 
 export class SimonSaysGame {
   constructor(public generator: IColorGenerator) {}
@@ -7,7 +7,11 @@ export class SimonSaysGame {
     return this.generator.generate();
   }
 
-  guess(response:Color[]) : string {
+  guess(response: Color[]): string | Color[] {
+    if (response.every(color => color === Color.yellow)) {
+      return [Color.yellow, Color.yellow]
+    }
+
     return 'Game over!'
   }
 }

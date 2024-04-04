@@ -22,9 +22,19 @@ describe("SimonSaysGame", () => {
     const game = new SimonSaysGame({
       generate: () => Color.yellow,
     });
+
     game.start();
 
     expect(game.guess([Color.blue])).toBe('Game over!');
+  });
 
+  it("should return a new color when user guess correctly", () => {
+    const game = new SimonSaysGame({
+      generate: () => Color.yellow,
+    });
+
+    game.start();
+
+    expect(game.guess([Color.yellow])).toStrictEqual([Color.yellow, Color.yellow]);
   });
 });
