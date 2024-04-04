@@ -1,5 +1,9 @@
+import { IColorGenerator } from "./ColorGenerator";
+
 export class SimonSaysGame {
-  start (): string {
-    return 'green'
+  constructor(public generator: IColorGenerator) {}
+
+  start(): string {
+    return this.generator.generate();
   }
 }
