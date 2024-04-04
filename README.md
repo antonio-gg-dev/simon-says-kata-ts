@@ -24,7 +24,7 @@ Your turn: y
 Good job!
 
 Simon says: yellow green
-Your turn: y y
+Your turn: y g
 Good job!
 
 Simon says: yellow green blue

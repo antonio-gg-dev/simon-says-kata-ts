@@ -1,9 +1,9 @@
-import { Example } from '../src/Example'
+import { SimonSaysGame } from '../src/SimonSaysGame'
 
-describe('kata-setup', () => {
-  it('example test', () => {
-    const example = new Example()
+describe('SimonSaysGame', () => {
+  it('should return a color when the game starts', () => {
+    const game = new SimonSaysGame()
 
-    expect(example.method()).toBe(true)
+    expect(game.start()).toBe('green')
   })
 })
